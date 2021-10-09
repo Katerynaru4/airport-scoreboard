@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #e7efec;
+  color: #212529;
+}
+
+#root {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flights {
+  &__title {
+    text-transform: uppercase;
+    margin: 40px 0 0 170px;
+    font-size: 70px;
+    line-height: 80px;
+    font-weight: 300;
+    padding: 0;
+    vertical-align: baseline;
+  }
+
+  &__search-from {
+    width: 780px;
+  }
+
+  &__content-conteiner {
+    margin-top: 40px;
+    width: 1120px;
+    padding: 0 80px;
+  }
+
+  &__content-navigation {
+    max-width: 960px;
+    display: flex;
+    padding-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 60px;
+  }
+
+  &__navigation-item {
+    text-align: right;
+    text-transform: uppercase;
+    padding: 0;
+    border: 0;
+    position: relative;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    outline: none;
+    background: #73d2f0;
+    overflow: hidden;
+    text-align: center;
+    font-size: 24px;
+    line-height: 60px;
+    color: #fff;
+    width: 100%;
+    &.active {
+      border-radius: 60px 60px 0 0 !important;
+      cursor: default;
+      z-index: 1;
+      background: #fff;
+      color: #73d2f0;
+    }
+  }
+  &__nav-link {
+    margin-right: -60px;
+    cursor: pointer;
+    flex: 1 1 auto;
+    text-transform: uppercase;
+    padding: 0;
+    border: 0;
+    font-weight: 600;
+    outline: none;
+    overflow: hidden;
+    border-radius: 60px 0px 0px 0px;
+
+    &:first-of-type {
+      border-radius: 60px 0 0 0;
+    }
+    &:last-of-type {
+      border-radius: 0 60px 0 0;
+    }
+  }
+  &__content-table {
+    background-color: #fff;
+    width: 1000px;
+    padding-top: 40px;
+  }
+}
+.search-form {
+  margin: 40px auto;
+  &__form {
+    height: 80px;
+    display: flex;
+    position: relative;
+  }
+
+  &__icon {
+  }
+
+  &__input {
+    outline: none;
+    height: 80px;
+    font-size: 24px;
+    padding-right: 220px;
+    padding-left: 70px;
+    display: block;
+    border: none;
+    width: 80%;
+  }
+
+  &__submit-btn {
+    width: 200px;
+    font-size: 26px;
+    text-transform: uppercase;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    background: #1eb7ee;
+    color: #fff;
+    border-radius: 0 80px 0 0;
+    text-align: left;
+    padding: 0 20px;
+  }
+}
+.content-table {
+  border-spacing: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  padding-top: 25px;
+  background: #fff;
+  padding: 0 80px;
+  width: 1000px;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+  font-weight: 400;
+  &__thead {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    margin-top: 35px;
+
+    color: #95989a;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__thead-row {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #95989a;
+  }
+
+  &__thead-item {
+    border: 0;
+    text-align: left;
+    vertical-align: bottom;
+    padding: 0.75rem;
+    color: #95989a;
+  }
+}
+.flights-content {
+  &__list {
+    font-size: 22px;
+    background-color: rgba(0, 102, 135, 0.1);
+  }
+  &__list-item:nth-child(even) {
+    background-color: #fff;
+  }
+}
+.search-icon {
+  position: absolute;
+  font-size: 40px;
+  color: #95989a;
+  top: 18px;
+  left: 18px;
+}
+.flight-field {
+  font-size: 18px;
+  line-height: 40px;
+  padding: 16px 10px;
+  border: 0;
+  vertical-align: top;
+  margin: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+  & img {
+    height: 40px;
+  }
+  &:first-child {
+    text-align: center;
+  }
+  & > .terminal {
+    color: #63c745;
+    font-weight: 700;
+    border: 1px solid #63c745;
+    border-radius: 50%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    font-size: 22px;
+  }
+}
+
+.icon-flight {
+  margin-right: 20px;
+  font-size: 40px;
+  position: absolute;
+  top: 8px;
+  left: 144px;
+}
