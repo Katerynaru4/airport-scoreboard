@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useLocation, Switch, Route } from 'react-router-dom';
-import NotFound from './NotFound.jsx';
 import PropTypes from 'prop-types';
-import * as flightsActions from '../flights.actions.js';
+import NotFound from './NotFound.jsx';
+import * as flightsActions from '../flights.actions';
 import {
   getDeparturesFlightsSelector,
   getArrivalsFlightsSelector,
-} from '../flights.selectors.js';
-import { useQuery, getSearchingFlight } from '../flights.utils.js';
+} from '../flights.selectors';
+import { useQuery, getSearchingFlight } from '../flights.utils';
 import FlightsContentTable from './FlightsContentTable.jsx';
 
 const FlightsContent = ({ getFlights, depaturesFlights, arrivalsFlights }) => {
@@ -21,8 +21,8 @@ const FlightsContent = ({ getFlights, depaturesFlights, arrivalsFlights }) => {
     '/arrivals': arrivalsFlights,
   };
 
-  let query = useQuery();
-  let searchingFlightNumber = query.get('search');
+  const query = useQuery();
+  const searchingFlightNumber = query.get('search');
 
   let searchedFlight = null;
 
@@ -53,10 +53,8 @@ const mapDispatch = {
   getFlights: flightsActions.getFlights,
 };
 
-const mapState = (state) => {
-  return {
+const mapState = (state) => ({
     depaturesFlights: getDeparturesFlightsSelector(state),
     arrivalsFlights: getArrivalsFlightsSelector(state),
-  };
-};
+  });
 export default connect(mapState, mapDispatch)(FlightsContent);

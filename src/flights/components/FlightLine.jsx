@@ -1,10 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 import PropTypes from 'prop-types';
-import {useParams} from 'react-router-dom'
 
-const FlightLine = ({ flight }) => {
-  return (
+const FlightLine = ({ flight }) => (
     <tr className="flights-content__list-item">
       <td className="flight-field ">
         <span className="terminal">{flight.term}</span>
@@ -28,7 +26,6 @@ const FlightLine = ({ flight }) => {
       <td className="flight-field">{flight.codeShareData[0].codeShare}</td>
     </tr>
   );
-};
 
 FlightLine.propTypes = {
   flight: PropTypes.object.isRequired,

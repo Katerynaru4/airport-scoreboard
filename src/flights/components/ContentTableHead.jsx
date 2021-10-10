@@ -1,7 +1,6 @@
 import React from 'react';
 
-const ContentTableHead = () => {
-  return (
+const ContentTableHead = () => (
     <thead className="content-table__thead">
       <tr className="content-table__thead-row">
         <th scope="col" className="content-table__thead-item">
@@ -25,6 +24,5 @@ const ContentTableHead = () => {
       </tr>
     </thead>
   );
-};
 
 export default ContentTableHead;

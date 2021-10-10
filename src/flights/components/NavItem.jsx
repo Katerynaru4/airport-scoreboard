@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 import classnames from 'classnames';
-import { useQuery } from '../flights.utils.js';
+import { useQuery } from '../flights.utils';
 
 
 const NavItem = ({ title, type }) => {
-  let query = useQuery();
+  const query = useQuery();
   const link = query.get('search')
     ? `/${type}?search=${query.get('search')}`
     : `/${type}`;

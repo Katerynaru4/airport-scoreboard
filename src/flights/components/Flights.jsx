@@ -3,8 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import SearchField from './SearchField.jsx';
 import ShowFlights from './ShowFlights.jsx';
 
-const Flights = () => {
-  return (
+const Flights = () => (
     <div className="flights">
       <h2 className="flights__title">Search Flight</h2>
       <BrowserRouter>
@@ -13,6 +12,5 @@ const Flights = () => {
       </BrowserRouter>
     </div>
   );
-};
 
 export default Flights;

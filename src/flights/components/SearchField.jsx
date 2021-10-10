@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
-import { useQuery } from '../flights.utils.js';
+import { useHistory } from 'react-router-dom';
+import { useQuery } from '../flights.utils';
 
 
 const SearchField = () => {
-  let query = useQuery();
+  const query = useQuery();
   const [value, setValue] = useState(query.get('search') || '');
   const history = useHistory();
   return (

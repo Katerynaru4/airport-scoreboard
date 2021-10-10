@@ -3,14 +3,11 @@ import  FlightsNavigation  from './FlightsNavigation.jsx';
 import FlightsContent from './FlightsContent.jsx';
 
 
-const ShowFlights = () => {
-  
-  return (
+const ShowFlights = () => (
     <div className="flights__content-conteiner">
       <FlightsNavigation />
       <FlightsContent /> 
     </div>
   );
-};
 
 export default ShowFlights;

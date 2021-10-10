@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import ContentTableHead from './ContentTableHead.jsx';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import ContentTableHead from './ContentTableHead.jsx';
 import { getFlightsSelector } from '../flights.selectors';
 import FlightLine from './FlightLine.jsx';
-import PropTypes from 'prop-types';
 
 const FlightsContentTable = ({ selectedFlight, flights }) => {
   const selectedFlights = flights[useParams().flightType.slice(0, -1)];
@@ -27,11 +27,9 @@ const FlightsContentTable = ({ selectedFlight, flights }) => {
   );
 };
 
-const mapState = (state) => {
-  return {
+const mapState = (state) => ({
     flights: getFlightsSelector(state),
-  };
-};
+  });
 
 FlightsContentTable.propTypes = {
   selectedFlight: PropTypes.object,
