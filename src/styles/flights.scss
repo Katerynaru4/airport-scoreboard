@@ -1,0 +1,112 @@
+.flights {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 70px;
+    line-height: 80px;
+    font-weight: 300;
+    padding: 0;
+    vertical-align: baseline;
+    width: 780px;
+    @include for-middle {
+      font-size: 35px;
+      line-height: 40px;
+      width: auto;
+    }
+  }
+
+  &__content-conteiner {
+    margin-top: 40px;
+    width: 1120px;
+    padding: 0 80px;
+    @include for-middle {
+      padding: 0;
+      width: auto;
+    }
+  }
+
+  &__content-table {
+    background-color: $color-white;
+  }
+  &__not-found {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 0 50px;
+    color: $color-dark-grey;
+    background: $color-white;
+    @include for-middle {
+      width: 580px;
+    }
+    @include for-small {
+      width: 400px;
+    }
+    @include for-extra-small {
+      width: 340px;
+    }
+  }
+}
+
+.content-table {
+  width: 100%;
+  color: $color-dark-grey;
+  border-collapse: collapse;
+  font-weight: 400;
+  &__thead {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    margin-top: 35px;
+    @include for-small {
+      font-size: 12px;
+      padding: 0.25rem;
+    }
+    @include for-extra-small {
+      display: none;
+    }
+  }
+
+  &__thead-row {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: $color-light-grey;
+  }
+
+  &__thead-item {
+    border: 0;
+    text-align: left;
+    vertical-align: bottom;
+    padding: 0.75rem;
+    color: $color-light-grey;
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 50px;
+    white-space: nowrap;
+    @include for-small {
+      font-size: 12px;
+      padding: 0.25rem;
+    }
+  }
+}
+.flights-content {
+  &__list {
+    font-size: 22px;
+    background-color: rgba(0, 102, 135, 0.1);
+    @include for-extra-small {
+      display: flex;
+      width: 350px;
+      flex-wrap: wrap;
+    }
+  }
+  &__list-item:nth-child(even) {
+    background-color: $color-white;
+  }
+}

@@ -1,0 +1,84 @@
+.search-form {
+  &__form {
+    height: 80px;
+    display: flex;
+    position: relative;
+    width: 780px;
+
+    @include for-middle {
+      height: 50px;
+      width: auto;
+    }
+    @include for-small {
+      height: 34px;
+    }
+  }
+
+  &__input {
+    outline: none;
+    font-size: 24px;
+    padding-right: 220px;
+    padding-left: 70px;
+    display: block;
+    border: none;
+    width: 80%;
+    @include for-middle {
+      font-size: 22px;
+      padding-right: 160px;
+      padding-left: 50px;
+      width: 550px;
+      border-radius: 0 50px 0 0;
+    }
+    @include for-small {
+      width: 300px;
+      font-size: 12px;
+      padding: 5px 75px 5px 5px;
+    }
+  }
+
+  &__submit-btn {
+    width: 200px;
+    font-size: 26px;
+    text-transform: uppercase;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    background: $background-light-aquamarine;
+    color: $color-white;
+    border-radius: 0 80px 0 0;
+    text-align: left;
+    padding: 0 20px;
+    @include for-middle {
+      width: 122px;
+      font-size: 20px;
+      font-weight: 400;
+      padding: 0 12px;
+    }
+    @include for-small {
+      width: 68px;
+      font-size: 12px;
+      font-weight: 400;
+      padding: 0 8px;
+      border-radius: 0;
+    }
+  }
+}
+.search-icon {
+  position: absolute;
+  font-size: 40px;
+  color: $color-light-grey;
+  top: 18px;
+  left: 18px;
+  @include for-middle {
+    font-size: 30px;
+    top: 11px;
+    left: 11px;
+  }
+  @include for-small {
+    display: none;
+  }
+}

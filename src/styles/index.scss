@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import 'variables.scss';
+@import 'breakpoints.scss';
+@import 'flights.scss';
+@import 'flight.scss';
+@import 'search-form.scss';
+@import 'navigation.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: $background-white;
+  color: $color-black;
+}
+
+#root {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}

@@ -22,20 +22,25 @@ const FlightsContent = ({ getFlights, depaturesFlights, arrivalsFlights }) => {
   };
 
   const query = useQuery();
+  const flightType = useLocation().pathname;
   const searchingFlightNumber = query.get('search');
 
   let searchedFlight = null;
 
   if (searchingFlightNumber) {
     searchedFlight = getSearchingFlight(
-      flightTypes[useLocation().pathname],
+      flightTypes[flightType],
       searchingFlightNumber
     );
   }
+
   return searchedFlight !== undefined ? (
     <Switch>
       <Route exact path="/:flightType">
-        <FlightsContentTable selectedFlight={searchedFlight} />
+        <FlightsContentTable
+          selectedFlight={searchedFlight}
+          selectedFlights={flightTypes[flightType]}
+        />
       </Route>
     </Switch>
   ) : (
@@ -54,7 +59,8 @@ const mapDispatch = {
 };
 
 const mapState = (state) => ({
-    depaturesFlights: getDeparturesFlightsSelector(state),
-    arrivalsFlights: getArrivalsFlightsSelector(state),
-  });
+  depaturesFlights: getDeparturesFlightsSelector(state),
+  arrivalsFlights: getArrivalsFlightsSelector(state),
+});
+
 export default connect(mapState, mapDispatch)(FlightsContent);

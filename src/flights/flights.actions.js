@@ -9,9 +9,8 @@ export const getFlightsList = (flightsList) => ({
   },
 });
 
-export const getFlights = () =>
-  function (dispatch) {
-    fetchFlights().then((data) => {
-      dispatch(getFlightsList(data.body));
-    });
-  };
+export const getFlights = () => (dispatch) => {
+  fetchFlights().then((data) => {
+    dispatch(getFlightsList(data.body));
+  });
+};

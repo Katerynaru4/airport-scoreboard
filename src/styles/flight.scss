@@ -1,0 +1,49 @@
+.flight-field {
+  font-size: 18px;
+  line-height: 40px;
+  padding: 16px 10px;
+  border: 0;
+  vertical-align: top;
+  margin: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+  @include for-small {
+    font-size: 14px;
+    padding: 8px 8px;
+    line-height: 20px;
+  }
+  @include for-extra-small {
+    font-size: 12px;
+  }
+  & img {
+    height: 40px;
+    @include for-small {
+      height: 28px;
+    }
+    @include for-extra-small {
+      height: 16px;
+      margin: 3px;
+    }
+  }
+  &:first-child {
+    text-align: center;
+  }
+  & > .terminal {
+    color: $color-green;
+    font-weight: 700;
+    border: 1px solid $color-green;
+    border-radius: 50%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    font-size: 22px;
+    @include for-small {
+      width: 20px;
+      height: 20px;
+      line-height: 19px;
+      font-size: 10px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+$md: 970px;
+$mdup: 760px;
+$sm: 580px;
+$esm: 440px;
+
+@mixin for-middle {
+  @media screen and (max-width: $md) {
+    @content;
+  }
+}
+@mixin for-middle-up {
+  @media screen and (max-width: $mdup) {
+    @content;
+  }
+}
+@mixin for-small {
+  @media screen and (max-width: $sm) {
+    @content;
+  }
+}
+@mixin for-extra-small {
+  @media screen and (max-width: $esm) {
+    @content;
+  }
+}
