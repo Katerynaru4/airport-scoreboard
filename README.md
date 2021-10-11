@@ -1,4 +1,4 @@
-# Calendar-react
+# Airport scoreboard
 
 **[Site link](https://katerynaru4.github.io/airport-scoreboard/)**
 
