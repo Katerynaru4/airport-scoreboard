@@ -6,8 +6,8 @@ Airport scoreboard page supports mobile(340px), tablet(up-to-1024px) and desktop
 
 ### The tech stack is:
 - React
-- JavaScript
 - Redux
+- JavaScript
 - Sass (Scss)
 - REST API (db)
 
