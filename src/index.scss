@@ -21,9 +21,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   &__title {
     text-transform: uppercase;
-
     font-size: 70px;
     line-height: 80px;
     font-weight: 300;
@@ -37,9 +37,6 @@ body {
     }
   }
 
-  &__search-from {
-  }
-
   &__content-conteiner {
     margin-top: 40px;
     width: 1120px;
@@ -51,12 +48,11 @@ body {
   }
 
   &__content-navigation {
-    max-width: 960px;
     display: flex;
-    padding-right: 20px;
-    margin-right: auto;
-    margin-left: auto;
-    height: 60px;
+    padding-right: 60px;
+
+    @media (max-width: 970px) {
+    }
   }
 
   &__navigation-item {
@@ -75,12 +71,23 @@ body {
     line-height: 60px;
     color: #fff;
     width: 100%;
+
+    @media (max-width: 580px) {
+      font-size: 16px;
+      line-height: 40px;
+    }
+    @media (max-width: 440px) {
+      font-size: 11px;
+      line-height: 30px;
+    }
     &.active {
       border-radius: 60px 60px 0 0 !important;
-      cursor: default;
       z-index: 1;
       background: #fff;
       color: #73d2f0;
+      @media (max-width: 580px) {
+        border-radius: 30px 30px 0 0 !important;
+      }
     }
   }
   &__nav-link {
@@ -95,19 +102,22 @@ body {
     overflow: hidden;
     border-radius: 60px 0px 0px 0px;
     @media (max-width: 970px) {
-      margin: 0;
     }
     &:first-of-type {
       border-radius: 60px 0 0 0;
+      @media (max-width: 580px) {
+        border-radius: 30px 0 0 0;
+      }
     }
     &:last-of-type {
       border-radius: 0 60px 0 0;
+      @media (max-width: 580px) {
+        border-radius: 0 30px 0 0;
+      }
     }
   }
   &__content-table {
     background-color: #fff;
-    width: 1000px;
-    padding-top: 40px;
   }
   &__not-found {
     min-height: 300px;
@@ -120,7 +130,154 @@ body {
     padding: 0 50px;
     color: #2f2f2f;
     background: #fff;
-    margin-right: -40px;
+    @media (max-width: 970px) {
+      width: 580px;
+    }
+    @media (max-width: 580px) {
+      width: 400px;
+    }
+    @media (max-width: 440px) {
+      width: 340px;
+    }
+  }
+}
+
+.content-table {
+  width: 100%;
+  color: #212529;
+  border-collapse: collapse;
+  font-weight: 400;
+  &__thead {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    margin-top: 35px;
+    @media (max-width: 580px) {
+      font-size: 12px;
+      padding: 0.25rem;
+    }
+    @media (max-width: 440px) {
+      display: none;
+    }
+  }
+
+  &__thead-row {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #95989a;
+  }
+
+  &__thead-item {
+    border: 0;
+    text-align: left;
+    vertical-align: bottom;
+    padding: 0.75rem;
+    color: #95989a;
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 50px;
+    white-space: nowrap;
+    @media (max-width: 580px) {
+      font-size: 12px;
+      padding: 0.25rem;
+    }
+  }
+}
+.flights-content {
+  &__list {
+    font-size: 22px;
+    background-color: rgba(0, 102, 135, 0.1);
+    @media (max-width: 440px) {
+      display: flex;
+      width: 350px;
+      flex-wrap: wrap;
+    }
+  }
+  &__list-item:nth-child(even) {
+    background-color: #fff;
+  }
+}
+.search-icon {
+  position: absolute;
+  font-size: 40px;
+  color: #95989a;
+  top: 18px;
+  left: 18px;
+  @media (max-width: 970px) {
+    font-size: 30px;
+    top: 11px;
+    left: 11px;
+  }
+  @media (max-width: 580px) {
+    display: none;
+  }
+}
+.flight-field {
+  font-size: 18px;
+  line-height: 40px;
+  padding: 16px 10px;
+  border: 0;
+  vertical-align: top;
+  margin: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+  @media (max-width: 580px) {
+    font-size: 14px;
+    padding: 8px 8px;
+    line-height: 20px;
+  }
+  @media (max-width: 440px) {
+    font-size: 12px;
+  }
+  & img {
+    height: 40px;
+    @media (max-width: 580px) {
+      height: 28px;
+    }
+    @media (max-width: 440px) {
+      height: 16px;
+      margin: 3px;
+    }
+  }
+  &:first-child {
+    text-align: center;
+  }
+  & > .terminal {
+    color: #63c745;
+    font-weight: 700;
+    border: 1px solid #63c745;
+    border-radius: 50%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    font-size: 22px;
+    @media (max-width: 580px) {
+      width: 20px;
+      height: 20px;
+      line-height: 19px;
+      font-size: 10px;
+    }
+  }
+}
+
+.icon-flight {
+  margin-right: 20px;
+  font-size: 40px;
+  position: absolute;
+  top: 8px;
+  left: 120px;
+  @media (max-width: 970px) {
+    left: 30px;
+  }
+  @media (max-width: 760px) {
+    left: 42px;
+    top: 14px;
+  }
+  @media (max-width: 580px) {
+    display: none;
   }
 }
 .search-form {
@@ -133,14 +290,10 @@ body {
     @media (max-width: 970px) {
       height: 50px;
       width: auto;
-
-      @media (max-width: 580px) {
-        height: 34px;
-      }
     }
-  }
-
-  &__icon {
+    @media (max-width: 580px) {
+      height: 34px;
+    }
   }
 
   &__input {
@@ -195,104 +348,4 @@ body {
       border-radius: 0;
     }
   }
-}
-.content-table {
-  border-spacing: 0;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  padding-top: 25px;
-  background: #fff;
-  padding: 0 80px;
-  width: 1000px;
-  margin-bottom: 16px;
-  margin-bottom: 1rem;
-  color: #212529;
-  border-collapse: collapse;
-  font-weight: 400;
-  &__thead {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    margin-top: 35px;
-
-    color: #95989a;
-    font-size: 16px;
-    font-weight: 600;
-  }
-
-  &__thead-row {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    color: #95989a;
-  }
-
-  &__thead-item {
-    border: 0;
-    text-align: left;
-    vertical-align: bottom;
-    padding: 0.75rem;
-    color: #95989a;
-  }
-}
-.flights-content {
-  &__list {
-    font-size: 22px;
-    background-color: rgba(0, 102, 135, 0.1);
-  }
-  &__list-item:nth-child(even) {
-    background-color: #fff;
-  }
-}
-.search-icon {
-  position: absolute;
-  font-size: 40px;
-  color: #95989a;
-  top: 18px;
-  left: 18px;
-  @media (max-width: 970px) {
-    font-size: 30px;
-    top: 11px;
-    left: 11px;
-  }
-  @media (max-width: 580px) {
-    display: none;
-  }
-}
-.flight-field {
-  font-size: 18px;
-  line-height: 40px;
-  padding: 16px 10px;
-  border: 0;
-  vertical-align: top;
-  margin: 0;
-  border-collapse: collapse;
-  border-spacing: 0;
-  text-align: left;
-  & img {
-    height: 40px;
-  }
-  &:first-child {
-    text-align: center;
-  }
-  & > .terminal {
-    color: #63c745;
-    font-weight: 700;
-    border: 1px solid #63c745;
-    border-radius: 50%;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 35px;
-    font-size: 22px;
-  }
-}
-
-.icon-flight {
-  margin-right: 20px;
-  font-size: 40px;
-  position: absolute;
-  top: 8px;
-  left: 144px;
 }
