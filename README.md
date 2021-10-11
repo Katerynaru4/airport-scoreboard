@@ -1,9 +1,13 @@
 # Calendar-react
 
-**[Site link](https://happy-kepler-bed5ac.netlify.app/)**
+**[Site link](https://katerynaru4.github.io/airport-scoreboard/)**
+
+Airport scoreboard page supports mobile(340px), tablet(up-to-1024px) and desktop (up-to-1440px) versions
+
 ### The tech stack is:
 - React
 - JavaScript
+- Redux
 - Sass (Scss)
 - REST API (db)
 
